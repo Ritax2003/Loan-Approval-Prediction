@@ -50,7 +50,7 @@ if selected =="Predict Loan Approval":
               loan_amount, loan_amount_term, credit_history, property_area, dependents]
     
 # Predict
-    if st..button("Predict"):
+    if st.button("Predict"):
         result = predict_loan_approval(user_input)
         if result == 1:
             st.success("Loan Approved")
