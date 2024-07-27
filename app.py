@@ -64,7 +64,7 @@ if selected =="Predict Loan Approval":
             f.write(new_data[1:leng-1]) 
             f.close()
         
-    def generate_report(Name, result):
+        def generate_report(Name, result):
                 buffer = BytesIO()
                 c = canvas.Canvas(buffer, pagesize=letter)
                 width, height = letter
@@ -89,7 +89,7 @@ if selected =="Predict Loan Approval":
                 else:
                    c.setFillColorRGB(0, 1, 0)  # Green color
                    prediction_text = "Loan Not Approved"
-                c.drawString(100, height-340, f"{prediction_text}")
+                c.drawString(100, height-345, f"{prediction_text}")
                 c.setFillColor(colors.black)
                 c.setFont("Helvetica", 10)
                 footnote = "Note: The prediction is based on probability. Actual results may vary. Please consult an expert for a detailed check."
@@ -100,10 +100,10 @@ if selected =="Predict Loan Approval":
                 buffer.close()
                 return pdf_bytes
                
-    pdf_bytes = generate_report(Name, result)
-    pdf_base64 = base64.b64encode(pdf_bytes).decode('utf-8')
-    pdf_display = f'<a href="data:application/pdf;base64,{pdf_base64}" download="diabetes_report_{Name}.pdf">Download Report</a>'
-    st.markdown(pdf_display, unsafe_allow_html=True)
+        pdf_bytes = generate_report(Name, result)
+        pdf_base64 = base64.b64encode(pdf_bytes).decode('utf-8')
+        pdf_display = f'<a href="data:application/pdf;base64,{pdf_base64}" download="Loan_Approval_report_{Name}.pdf">Download Report</a>'
+        st.markdown(pdf_display, unsafe_allow_html=True)
            
 if selected == "Our Prediction Records":
         st.markdown("<h3 style='text-align: center;'>PREDICTION RECORDS OF OUR PREVIOUS USERS</h1>", unsafe_allow_html=True)
@@ -113,12 +113,12 @@ if selected == "Our Prediction Records":
         st.markdown("____")
         st.write("All the records are stored only for academic and research purpose & will not be used for any other means.")
         
-    if selected == "About Me":
-        st.markdown("<h2 style='text-align: center;'>ABOUT</h2>", unsafe_allow_html=True)
-        st.markdown("____")
-        st.markdown("<p style='text-align: center;'>This is an academic project made by B.Tech Computer Science And Engineering 3rd year student.</p>", unsafe_allow_html=True)
-        st.markdown("____")
-        st.markdown("<h4 style='text-align: center;'>Developed and maintained by</h4>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>Subrata Bhuin</p>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>subratabhuin6@gmail.com</p>", unsafe_allow_html=True)
-        st.markdown("____")
+if selected == "About Me":
+    st.markdown("<h2 style='text-align: center;'>ABOUT</h2>", unsafe_allow_html=True)
+    st.markdown("____")
+    st.markdown("<p style='text-align: center;'>This is an academic project made by B.Tech Computer Science And Engineering 3rd year student.</p>", unsafe_allow_html=True)
+    st.markdown("____")
+    st.markdown("<h4 style='text-align: center;'>Developed and maintained by</h4>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'>Subrata Bhuin</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'>subratabhuin6@gmail.com</p>", unsafe_allow_html=True)
+    st.markdown("____")
