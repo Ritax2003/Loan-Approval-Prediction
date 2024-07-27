@@ -56,7 +56,7 @@ if selected =="Predict Loan Approval":
             st.success("Loan Approved")
         else:
             st.error("Loan Denied")
-        f = open("user_records.txt", "a")
+            f = open("user_records.txt", "a")
             f.write("\n")
             new_data = str([Name, gender, married, education, self_employed, applicant_income, coapplicant_income,
               loan_amount, loan_amount_term, credit_history, property_area, dependents, result])
