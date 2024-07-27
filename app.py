@@ -84,10 +84,10 @@ if selected =="Predict Loan Approval":
                 c.drawString(100, height-310, "--------------------------------------------")
                 c.drawString(100, height-330, "Prediction:")
                 if result == 1:
-                   c.setFillColorRGB(1, 0, 0)  # Red color
+                   c.setFillColorRGB(0, 1, 0)  # Red color
                    prediction_text = "Loan Approved"
                 else:
-                   c.setFillColorRGB(0, 1, 0)  # Green color
+                   c.setFillColorRGB(1, 0, 0)  # Green color
                    prediction_text = "Loan Not Approved"
                 c.drawString(100, height-345, f"{prediction_text}")
                 c.setFillColor(colors.black)
