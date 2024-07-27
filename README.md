@@ -1,6 +1,7 @@
 # Loan Approval Prediction System
 
-Welcome to the Loan Approval Prediction System! This project uses machine learning models to predict loan approval status based on various applicant features. The application is deployed using Streamlit and is accessible via [this link](https://loan-approval-prediction-subrata.streamlit.app/).
+Welcome to the Loan Approval Prediction System! This project uses machine learning models to predict loan approval status based on various applicant features. The application is deployed using Streamlit and is accessible via - Streamlit Link-  [this link](https://loan-approval-prediction-subrata.streamlit.app/).
+### This file is also uploaded in Huggingface space - https://huggingface.co/spaces/subrata2003/loan_approval_system
 
 ## Project Overview
 
